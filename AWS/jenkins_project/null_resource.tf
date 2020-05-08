@@ -5,6 +5,7 @@ resource "null_resource" "jenkins_passwd" {
     always_run = "${timestamp()}"
   }
 
+
   provisioner "remote-exec" {
     connection {
       type        = "ssh"
