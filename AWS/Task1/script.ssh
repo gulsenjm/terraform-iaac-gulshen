@@ -1,0 +1,14 @@
+#!/bin/bash
+sudo yum install httpd -y
+sudo systemctl start httpd
+sudo yum install php -y
+sudo yum install mariadb-server -y
+sudo yum install mysql -y
+sudo yum install elinks -y
+sudo yum install php-mysql -y
+sudo yum install php-gd -y
+sudo wget https://wordpress.org/latest.zip
+sudo tar -xf wordpress-5.0.1.tar.gz
+sudo mv wordpress/* /var/www/html/
+sudo mv /var/www/html/index.html /tmp/
+sudo systemctl restart httpd
